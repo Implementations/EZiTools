@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EZiTools</string>
+    <string name="textDefault">Te</string>
+    <string name="tuner">TUNER</string>
+    <string name="metronome">METRONOME</string>
+    <string name="bpm">BPM..</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+</resources>

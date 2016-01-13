@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".metronome.MetronomeFragment">
+
+    <EditText
+        android:layout_width="@dimen/text_width"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/control_margin"
+        android:hint="@string/bpm"
+        android:background="#FFFFFF"
+        android:inputType="number"
+        android:id="@+id/bpm"
+        android:maxLength="3"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="10dp"
+        android:id="@+id/bpmSeek"
+        android:layout_below="@id/bpm"
+        android:layout_marginTop="@dimen/control_margin"/>
+
+    <Button
+        style="@style/smallButton"
+        android:text="@string/increment"
+        android:id="@+id/increment"
+        android:layout_toRightOf="@id/bpm"
+        android:layout_marginLeft="@dimen/control_margin"
+        android:layout_alignBottom="@id/bpm"/>
+
+    <Button
+        style="@style/smallButton"
+        android:text="@string/decrement"
+        android:id="@+id/decrement"
+        android:layout_toLeftOf="@id/bpm"
+        android:layout_alignBottom="@id/bpm"
+        android:layout_marginRight="@dimen/control_margin"/>
+
+    <ImageButton
+        style="@style/largeButton"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/control_margin"
+        android:layout_below="@id/bpmSeek"
+        android:src="@drawable/play"
+        android:id="@+id/play" />
+
+</RelativeLayout>

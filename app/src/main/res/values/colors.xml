@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#DFDFDF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#c8e8ff</color>
+    <color name="colorInfo">#5bc0de</color>
+    <color name="colorInfo_press">#31a0ff</color>
+    <color name="colorShadow">#6a6b6c</color>
+    <color name="colorShadowLight">#BBCCBB</color>
+    <color name="colorOrange">#f0ad4e</color>
+    <color name="colorOrange_press">#ec971f</color>
+    <color name="colorRed">#d9534f</color>
+    <color name="colorRead_press">#c9302c</color>
+    <color name="colorGreen">#5cb85c</color>
+    <color name="colorGreen_press">#449d44</color>
+</resources>
