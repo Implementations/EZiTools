@@ -20,7 +20,7 @@
     <style name="smallButton" parent="baseLayOut">
         <item name="android:layout_width">@dimen/button_size_small</item>
         <item name="android:layout_height">@dimen/button_size_small</item>
-        <item name="android:stateListAnimator">@android:anim/</item>
+        <item name="android:stateListAnimator">@android:anim/fade_in</item>
     </style>
 
 </resources>
