@@ -4,7 +4,9 @@
         <layer-list>
             <item android:bottom="@dimen/button_shadow_margin" android:right="@dimen/button_shadow_margin">
                 <shape android:shape="oval">
-                    <solid android:color="@color/colorInfo_press"/>
+                    <gradient android:angle="90" android:endColor="@color/colorPrimaryDark"
+                        android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"
+                        android:type="radial" />
                 </shape>
             </item>
         </layer-list>
@@ -16,13 +18,16 @@
                 <shape android:shape="oval">
                     <gradient android:startColor="@color/colorShadow"
                         android:endColor="@color/colorShadowLight"
-                        android:type="linear"/>
+                        android:type="radial"
+                        android:gradientRadius="40dp"/>
                 </shape>
             </item>
             <!-- CONTENT LAYER -->
             <item android:bottom="@dimen/button_shadow_margin" android:right="@dimen/button_shadow_margin">
                 <shape android:shape="oval">
-                    <solid android:color="@color/colorInfo"/>
+                    <gradient android:angle="90" android:endColor="@color/colorInfo"
+                        android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"
+                        android:type="radial" />
                 </shape>
             </item>
         </layer-list>

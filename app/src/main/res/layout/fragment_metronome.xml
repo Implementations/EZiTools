@@ -25,22 +25,6 @@
         android:layout_below="@id/bpm"
         android:layout_marginTop="@dimen/control_margin"/>
 
-    <Button
-        style="@style/smallButton"
-        android:text="@string/increment"
-        android:id="@+id/increment"
-        android:layout_toRightOf="@id/bpm"
-        android:layout_marginLeft="@dimen/control_margin"
-        android:layout_alignBottom="@id/bpm"/>
-
-    <Button
-        style="@style/smallButton"
-        android:text="@string/decrement"
-        android:id="@+id/decrement"
-        android:layout_toLeftOf="@id/bpm"
-        android:layout_alignBottom="@id/bpm"
-        android:layout_marginRight="@dimen/control_margin"/>
-
     <ImageButton
         style="@style/largeButton"
         android:scaleType="fitCenter"
@@ -50,5 +34,22 @@
         android:layout_below="@id/bpmSeek"
         android:src="@drawable/play"
         android:id="@+id/play" />
+
+
+    <Button
+        style="@style/smallButton"
+        android:text="@string/increment"
+        android:id="@+id/increment"
+        android:layout_toRightOf="@id/play"
+        android:layout_marginLeft="@dimen/control_margin"
+        android:layout_alignBottom="@id/play"/>
+
+    <Button
+        style="@style/smallButton"
+        android:text="@string/decrement"
+        android:id="@+id/decrement"
+        android:layout_toLeftOf="@id/play"
+        android:layout_alignBottom="@id/play"
+        android:layout_marginRight="@dimen/control_margin"/>
 
 </RelativeLayout>
