@@ -1,13 +1,11 @@
-package com.kanishk.ezitools.utils;
+package com.kanishk.ezetools.utils;
 
 import android.content.Context;
-import android.content.res.AssetManager;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.channels.FileChannel;
 
 /**
  * Created by kanishk on 1/12/16.

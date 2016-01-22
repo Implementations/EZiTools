@@ -1,4 +1,4 @@
-package com.kanishk.ezitools;
+package com.kanishk.ezetools;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -8,12 +8,11 @@ import android.os.IBinder;
 import android.support.v4.util.ArrayMap;
 import android.util.Log;
 
-import com.kanishk.ezitools.utils.Constants;
+import com.kanishk.ezetools.utils.Constants;
 
 import org.puredata.android.io.AudioParameters;
 import org.puredata.android.service.PdService;
 import org.puredata.core.PdBase;
-import org.puredata.core.PdListener;
 import org.puredata.core.utils.IoUtils;
 import org.puredata.core.utils.PdDispatcher;
 

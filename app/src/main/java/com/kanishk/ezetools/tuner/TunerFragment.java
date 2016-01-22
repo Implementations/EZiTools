@@ -1,4 +1,4 @@
-package com.kanishk.ezitools.tuner;
+package com.kanishk.ezetools.tuner;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kanishk.ezitools.R;
+import com.kanishk.ezetools.R;
 
 /**
  * A class for metronome.

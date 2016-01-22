@@ -1,11 +1,11 @@
-package com.kanishk.ezitools;
+package com.kanishk.ezetools;
 
 import android.app.Application;
 
 /**
  * Created by kanishk on 1/12/16.
  */
-public class EZiApplication extends Application {
+public class EZeApplication extends Application {
 
     @Override
     public void onCreate() {

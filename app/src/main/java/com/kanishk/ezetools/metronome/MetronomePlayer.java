@@ -1,18 +1,17 @@
-package com.kanishk.ezitools.metronome;
+package com.kanishk.ezetools.metronome;
 
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
-import android.util.Log;
 
-import com.kanishk.ezitools.PdServiceManager;
-import com.kanishk.ezitools.utils.Constants;
+import com.kanishk.ezetools.PdServiceManager;
+import com.kanishk.ezetools.utils.Constants;
 
 import org.puredata.core.PdBase;
 import org.puredata.core.PdListener;
 
-import static com.kanishk.ezitools.utils.Constants.CLICK_FILES;
+import static com.kanishk.ezetools.utils.Constants.CLICK_FILES;
 
 /**
  * Metronome player. A singleton to manage the play state of metronome.

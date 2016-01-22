@@ -1,17 +1,17 @@
-package com.kanishk.ezitools;
+package com.kanishk.ezetools;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
-import com.kanishk.ezitools.metronome.MetronomeFragment;
-import com.kanishk.ezitools.metronome.MetronomePlayer;
-import com.kanishk.ezitools.tuner.TunerFragment;
-import com.kanishk.ezitools.utils.Constants;
+import com.kanishk.ezetools.metronome.MetronomeFragment;
+import com.kanishk.ezetools.tuner.TunerFragment;
+import com.kanishk.ezetools.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);;
         initSystemServices();
 //        MetronomePlayer.get().init(this);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(mViewPager);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);

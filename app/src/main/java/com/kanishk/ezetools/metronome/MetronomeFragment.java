@@ -1,4 +1,4 @@
-package com.kanishk.ezitools.metronome;
+package com.kanishk.ezetools.metronome;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,9 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 
-import com.kanishk.ezitools.R;
-import com.kanishk.ezitools.utils.Constants;
-import com.kanishk.ezitools.utils.Util;
+import com.kanishk.ezetools.R;
+import com.kanishk.ezetools.utils.Constants;
+import com.kanishk.ezetools.utils.Util;
 
 import org.puredata.core.PdBase;
 

@@ -1,4 +1,4 @@
-package com.kanishk.ezitools;
+package com.kanishk.ezetools;
 
 import org.junit.Test;
 

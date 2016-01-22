@@ -1,6 +1,6 @@
-package com.kanishk.ezitools.utils;
+package com.kanishk.ezetools.utils;
 
-import com.kanishk.ezitools.R;
+import com.kanishk.ezetools.R;
 
 /**
  * Created by kanishk on 1/9/16.

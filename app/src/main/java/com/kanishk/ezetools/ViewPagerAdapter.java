@@ -1,4 +1,4 @@
-package com.kanishk.ezitools;
+package com.kanishk.ezetools;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
