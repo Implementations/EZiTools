@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.kanishk.ezetools.R;
 import com.kanishk.ezetools.utils.Constants;
@@ -39,7 +40,7 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
 
     private ImageButton mPlay;
 
-    private EditText mBeatCountText;
+    private TextView mBeatCountText;
 
     private SeekBar mBpmSeek;
 
@@ -56,7 +57,7 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
         Log.d(TAG, "Metro view");
         View root = inflater.inflate(R.layout.fragment_metronome, container, false);
         mPlay = (ImageButton) root.findViewById(R.id.play);
-        mBeatCountText = (EditText) root.findViewById(R.id.bpm);
+        mBeatCountText = (TextView) root.findViewById(R.id.bpm);
         mBpmSeek = (SeekBar) root.findViewById(R.id.bpmSeek);
         mBpmSeek.setMax(Constants.MAX_BEATS - Constants.MIN_BEATS);
         Button increment = (Button) root.findViewById(R.id.increment);

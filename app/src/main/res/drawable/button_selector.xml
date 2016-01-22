@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <layer-list>
-            <item android:bottom="@dimen/button_shadow_margin" android:right="@dimen/button_shadow_margin">
+            <item android:bottom="@dimen/shadow_margin" android:right="@dimen/shadow_margin">
                 <shape android:shape="oval">
                     <gradient android:angle="90" android:endColor="@color/colorPrimaryDark"
                         android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"
@@ -14,7 +14,7 @@
     <item>
         <layer-list>
             <!-- SHADOW LAYER-->
-            <item android:left="@dimen/button_shadow_margin" android:top="@dimen/button_shadow_margin">
+            <item android:left="@dimen/shadow_margin" android:top="@dimen/shadow_margin">
                 <shape android:shape="oval">
                     <gradient android:startColor="@color/colorShadow"
                         android:endColor="@color/colorShadowLight"
@@ -23,7 +23,7 @@
                 </shape>
             </item>
             <!-- CONTENT LAYER -->
-            <item android:bottom="@dimen/button_shadow_margin" android:right="@dimen/button_shadow_margin">
+            <item android:bottom="@dimen/shadow_margin" android:right="@dimen/shadow_margin">
                 <shape android:shape="oval">
                     <gradient android:angle="90" android:endColor="@color/colorInfo"
                         android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"

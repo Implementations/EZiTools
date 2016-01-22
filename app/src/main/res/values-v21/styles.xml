@@ -14,13 +14,14 @@
         <item name="android:layout_width">@dimen/button_size_large</item>
         <item name="android:layout_height">@dimen/button_size_large</item>
         <item name="android:elevation">10dp</item>
+        <item name="android:translationZ">@dimen/elevation</item>
     </style>
 
 
     <style name="smallButton" parent="baseLayOut">
         <item name="android:layout_width">@dimen/button_size_small</item>
         <item name="android:layout_height">@dimen/button_size_small</item>
-        <!--<item name="android:stateListAnimator">@drawable/button_state_list_anim_material</item>-->
+        <item name="android:elevation">@dimen/elevation</item>
     </style>
 
 </resources>

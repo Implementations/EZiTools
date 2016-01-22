@@ -13,5 +13,6 @@
     <dimen name="control_margin">30dp</dimen>
     <dimen name="button_corner">1dp</dimen>
     <dimen name="button_stroke">1dp</dimen>
-    <dimen name="button_shadow_margin">4dp</dimen>
+    <dimen name="shadow_margin">4dp</dimen>
+    <dimen name="elevation">5dp</dimen>
 </resources>

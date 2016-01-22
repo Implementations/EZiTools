@@ -4,7 +4,7 @@
         <layer-list>
             <item>
                 <shape android:shape="oval">
-                    <gradient android:angle="90" android:endColor="@color/colorPrimaryDark"
+                    <gradient android:angle="90" android:endColor="@color/colorInfo"
                         android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"
                         android:type="radial" />
                 </shape>
@@ -15,7 +15,7 @@
         <layer-list>
             <item>
                 <shape android:shape="oval">
-                    <gradient android:angle="90" android:endColor="@color/colorInfo"
+                    <gradient android:angle="90" android:endColor="@color/colorPrimaryDark"
                         android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"
                         android:type="radial" />
                 </shape>
