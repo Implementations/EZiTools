@@ -13,6 +13,8 @@ public class Constants {
             R.raw.marimba2, R.raw.click_1, R.raw.click_2, R.raw.pt_click1,
             R.raw.pt_click2};
 
+    public static int[] NOTES_PER_BEAT = {R.drawable.quarter, R.drawable.eighth, R.drawable.triplet};
+
     public static final String TICK = "tick.wav";
 
     public static final String TOCK = "tock.wav";
@@ -25,13 +27,17 @@ public class Constants {
 
     public static final int MAX_BEATS = 400;
 
+    public static final int MAX_VOLUME = 60;
+
     public static final int MIN_BEATS = 20;
 
-    public static final int DEFAULT_TIMING = 4;
-
-    public static final int DEFAULT_BEAT = 90;
-
     public static final String SEND_BEAT = "bpm";
+
+    public static final String SEND_TIMING = "timing";
+
+    public static final String SEND_NOTES_PERBEAT = "npb";
+
+    public static final String SEND_VOLUME = "volume";
 
     public static final String SEND_BANG = "bang";
 

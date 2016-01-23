@@ -10,4 +10,5 @@
     <string name="one">one</string>
     <string name="two">two</string>
     <string name="three">three</string>
+    <string name="timing_default">4/4</string>
 </resources>

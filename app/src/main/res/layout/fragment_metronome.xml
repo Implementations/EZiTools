@@ -13,43 +13,63 @@
         card_view:cardCornerRadius="@dimen/shadow_margin"
         card_view:cardElevation="@dimen/elevation"
         card_view:cardUseCompatPadding="true"
-        android:id="@+id/bpmCotrols">
+        android:id="@+id/bpmControls">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/control_margin"
-                android:hint="@string/bpm"
-                android:id="@+id/bpm"
-                />
-
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxHeight="10dp"
-                android:id="@+id/bpmSeek"
-                android:layout_below="@id/bpm"
-                android:layout_marginTop="@dimen/control_margin"/>
 
             <Button
                 style="@style/smallButton"
                 android:text="@string/increment"
                 android:id="@+id/increment"
-                android:layout_toRightOf="@id/bpm"
-                android:layout_marginLeft="@dimen/control_margin"
-                android:layout_alignBottom="@id/bpm"/>
+                android:layout_marginTop="@dimen/control_margin_small"
+                android:layout_marginRight="@dimen/control_margin"
+                android:layout_alignParentRight="true"/>
 
             <Button
                 style="@style/smallButton"
                 android:text="@string/decrement"
                 android:id="@+id/decrement"
-                android:layout_toLeftOf="@id/bpm"
-                android:layout_alignBottom="@id/bpm"
-                android:layout_marginRight="@dimen/control_margin"/>
+                android:layout_alignBottom="@id/increment"
+                android:layout_marginLeft="@dimen/control_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:layout_below="@id/increment"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/bpm"
+                />
+
+            <Button
+                style="@style/smallButton"
+                android:layout_alignLeft="@id/decrement"
+                android:layout_below="@id/decrement"
+                android:id="@+id/timing"
+                android:text="@string/timing_default"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="@dimen/control_margin"/>
+
+            <ImageButton
+                style="@style/smallButton"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_alignLeft="@id/increment"
+                android:layout_below="@id/increment"
+                android:src="@drawable/quarter"
+                android:id="@+id/notesperBeat"
+                android:layout_marginTop="@dimen/control_margin"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:maxHeight="40dp"
+                android:id="@+id/bpmSeek"
+                android:layout_below="@id/notesperBeat"
+                android:layout_marginTop="@dimen/control_margin_small"/>
+
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -61,8 +81,16 @@
         android:adjustViewBounds="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/control_margin"
-        android:layout_below="@id/bpmCotrols"
+        android:layout_below="@id/bpmControls"
         android:src="@drawable/play"
         android:id="@+id/play" />
 
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rotation="270"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/bpmControls"
+        android:id="@+id/volume"/>
 </RelativeLayout>
