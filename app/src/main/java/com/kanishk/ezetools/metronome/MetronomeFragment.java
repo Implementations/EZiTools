@@ -71,7 +71,7 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
         mTiming = (Button) root.findViewById(R.id.timing);
         Button increment = (Button) root.findViewById(R.id.increment);
         Button decrement = (Button) root.findViewById(R.id.decrement);
-        initState(savedInstanceState);
+        initState();
         mPlay.setOnClickListener(this);
         mBpmSeek.setOnSeekBarChangeListener(this);
         mVolumeSeek.setOnSeekBarChangeListener(this);
@@ -97,7 +97,7 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
         return root;
     }
 
-    private void initState(Bundle savedInstanceState) {
+    private void initState() {
         mBeatCountText.setText(Integer.toString(mCurrentState.getCurrentBeat()));
         setSeekBarValue(mCurrentState.getCurrentBeat());
         mVolumeSeek.setProgress(mCurrentState.getVolume());
