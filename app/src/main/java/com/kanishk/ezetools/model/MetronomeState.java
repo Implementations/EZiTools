@@ -36,7 +36,11 @@ public class MetronomeState implements Parcelable {
 
     private int volume;
 
+    private long lastTapTime;
+
     private boolean isPlaying;
+
+    private boolean isTapped;
     
     public MetronomeState() {
         this.currentBeat = DEFAULT_BEAT;
@@ -108,6 +112,22 @@ public class MetronomeState implements Parcelable {
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    public boolean isTapped() {
+        return isTapped;
+    }
+
+    public void setTapped(boolean tapped) {
+        isTapped = tapped;
+    }
+
+    public long getLastTapTime() {
+        return lastTapTime;
+    }
+
+    public void setLastTapTime(long lastTapTime) {
+        this.lastTapTime = lastTapTime;
     }
 
     private static final Parcelable.Creator<MetronomeState> CREATOR = new Creator<MetronomeState>() {

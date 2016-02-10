@@ -2,6 +2,7 @@ package com.kanishk.ezetools.metronome;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -56,6 +57,8 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
 
     private Button mTiming;
 
+    private Button mTap;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,6 +72,7 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
         mBpmSeek.setMax(Constants.MAX_BEATS - Constants.MIN_BEATS);
         mVolumeSeek.setMax(Constants.MAX_VOLUME);
         mTiming = (Button) root.findViewById(R.id.timing);
+        mTap = (Button) root.findViewById(R.id.tap);
         Button increment = (Button) root.findViewById(R.id.increment);
         Button decrement = (Button) root.findViewById(R.id.decrement);
         initState();
@@ -77,6 +81,7 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
         mVolumeSeek.setOnSeekBarChangeListener(this);
         mNoteBeat.setOnClickListener(this);
         mTiming.setOnClickListener(this);
+        mTap.setOnClickListener(this);
         View.OnTouchListener onTouchListener = new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -147,6 +152,9 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
                 changeBeatCount(true);
                 PdBase.sendFloat(Constants.SEND_BEAT, mCurrentState.getCurrentBeat());
                 break;
+            case R.id.tap:
+                handleTapButtonClick();
+                break;
             case R.id.decrement:
                 changeBeatCount(false);
                 PdBase.sendFloat(Constants.SEND_BEAT, mCurrentState.getCurrentBeat());
@@ -163,6 +171,31 @@ public class MetronomeFragment extends Fragment implements View.OnClickListener,
                 setTimingText(timing);
                 mCurrentState.setCurrentTiming(timing);
                 break;
+        }
+    }
+
+
+    /**
+     * Handle the tap button feature of metronome. Calculates the duration between the two consecutive taps
+     * and sets it as the beat count.
+     * */
+    public void handleTapButtonClick() {
+        if(mCurrentState.isTapped()) {
+            mTap.setBackgroundResource(R.drawable.button_selector);
+            mCurrentState.setTapped(false);
+            long elapsed = SystemClock.elapsedRealtime() - mCurrentState.getLastTapTime();
+            mCurrentState.setLastTapTime(0);
+            int beat = (int) Math.floor(60000D/elapsed);
+            if(beat >= Constants.MIN_BEATS && beat <= Constants.MAX_BEATS) {
+                setSeekBarValue(beat);
+                mCurrentState.setCurrentBeat(beat);
+                PdBase.sendFloat(Constants.SEND_BEAT, mCurrentState.getCurrentBeat());
+                mBeatCountText.setText(Integer.toString(mCurrentState.getCurrentBeat()));
+            }
+        } else {
+            mCurrentState.setTapped(true);
+            mCurrentState.setLastTapTime(SystemClock.elapsedRealtime());
+            mTap.setBackgroundResource(R.drawable.press_selector);
         }
     }
 

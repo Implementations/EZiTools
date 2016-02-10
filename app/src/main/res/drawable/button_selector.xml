@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true">
-        <layer-list>
-            <item android:bottom="@dimen/shadow_margin" android:right="@dimen/shadow_margin">
-                <shape android:shape="oval">
-                    <gradient android:angle="90" android:endColor="@color/colorPrimaryDark"
-                        android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"
-                        android:type="linear" />
-                </shape>
-            </item>
-        </layer-list>
-    </item>
-    <item>
-        <layer-list>
-            <!-- SHADOW LAYER-->
-            <item android:left="@dimen/shadow_margin" android:top="@dimen/shadow_margin">
-                <shape android:shape="oval">
-                    <gradient android:startColor="@color/colorShadow"
-                        android:endColor="@color/colorShadowLight"
-                        android:type="linear"
-                        android:gradientRadius="40dp"/>
-                </shape>
-            </item>
-            <!-- CONTENT LAYER -->
-            <item android:bottom="@dimen/shadow_margin" android:right="@dimen/shadow_margin">
-                <shape android:shape="oval">
-                    <gradient android:angle="90" android:endColor="@color/colorInfo"
-                        android:gradientRadius="40dp" android:startColor="@color/colorInfo_press"
-                        android:type="linear" />
-                </shape>
-            </item>
-        </layer-list>
-    </item>
+    <item android:state_pressed="true" android:drawable="@drawable/press_selector"/>
+    <item android:drawable="@drawable/normal_selector"/>
 </selector>

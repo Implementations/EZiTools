@@ -37,10 +37,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_size"
-                android:layout_below="@id/increment"
+                android:layout_marginTop="@dimen/control_margin_small"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/bpm"
-                />
+                android:id="@+id/bpm"/>
 
             <Button
                 style="@style/smallButton"
@@ -61,6 +60,16 @@
                 android:src="@drawable/quarter"
                 android:id="@+id/notesperBeat"
                 android:layout_marginTop="@dimen/control_margin"/>
+
+            <Button
+                style="@style/smallButton"
+                android:scaleType="fitCenter"
+                android:text="@string/tap"
+                android:id="@+id/tap"
+                android:textSize="@dimen/text_small"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@id/notesperBeat"
+                />
 
             <SeekBar
                 android:layout_width="match_parent"

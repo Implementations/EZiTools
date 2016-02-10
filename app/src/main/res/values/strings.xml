@@ -11,4 +11,5 @@
     <string name="two">two</string>
     <string name="three">three</string>
     <string name="timing_default">4/4</string>
+    <string name="tap">TAP</string>
 </resources>
